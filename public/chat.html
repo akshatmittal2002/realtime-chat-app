@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Chat Page</title>
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1><img id="icon" src = "images/icon.png">WassUp!</h1>
+            <a href="index.html" class="btn">Leave Room</a>
+        </header>
+        <main class="main-chat">
+            <div class="chat-sidebar">
+                <h3>Room Name:</h3>
+                <h2 id="room-name"></h2>
+                <h3>Users:</h3>
+                <ul id="users"></ul>
+            </div>
+            <div>
+                <div class="chat-messages"></div>
+                <div class="typing"></div>
+            </div>
+        </main>
+        <div class="chat-form-container">     
+            <form id="chat-form">
+                <input type="text" placeholder="Write your message..." id="msg" required autocomplete="off">
+                <button class="btn">Send</button>
+            </form>    
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
